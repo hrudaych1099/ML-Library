@@ -44,7 +44,7 @@ def f1_score(y, y_pred):
     weighted_f1 = np.sum(np.array(f1_scores) * np.array(weights))
     return weighted_f1
 #calculation of f1 score
-f1_score = f1_score(Y, np.array(pred))
-print(f"F1 Score: {f1_score}")
+f1 = f1_score(Y, np.array(pred))
+print(f"F1 Score: {f1}")
 
 
