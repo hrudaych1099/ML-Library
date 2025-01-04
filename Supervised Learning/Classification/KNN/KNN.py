@@ -26,7 +26,7 @@ pred = knn_classify(X, Y, X_test, k=3)
 #print(pred)
 #Calculating the F1 score of the model using precision and recall
 assert len(Y) == len(pred),
-def f1_score_from_scratch(y, y_pred):
+def f1_score(y, y_pred):
     unique_classes = np.unique(y)
     f1_scores = []
     total_samples = len(y)
@@ -44,7 +44,7 @@ def f1_score_from_scratch(y, y_pred):
     weighted_f1 = np.sum(np.array(f1_scores) * np.array(weights))
     return weighted_f1
 #calculation of f1 score
-f1_score = f1_score_from_scratch(Y, np.array(pred))
+f1_score = f1_score(Y, np.array(pred))
 print(f"F1 Score: {f1_score}")
 
 
